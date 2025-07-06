@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Contacto - Aldana Ordoñe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <button id="abrir" class="abrir-menu">☰</button>
+      <ul class="horizontal" id="horizontal">
+        <li><button id="cerrar" class="cerrar-menu">x</button></li>
+        <li><a href="../index.html">Menu</a></li>
+        <li><a href="../arte/index.html">Arte</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="../proyectos/index.html">Proyectos</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="encabezado-contacto">
+    <span style='font-size:50px;'>&#9993;</span>
+    <h2>¡Trabajemos juntos!</h2>
+    <p>Para comisiones o propuestas de trabajo, mandar mail a:</p>
+    <h3>aldanahuilen@gmail.com</h3>
+    <h5>O mandar mensaje vía el siguiente formato</h5>
+  </div>
+  
+  <section>
+    <div class="box reveal">
+  <div class="contenido-principal" style="max-width: 500px; margin: 30px auto;">
+    <form id="contactForm">
+      <h2>Contacto</h2>
+      <div class="input-group">
+        <label for="name">Nombre*</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" required>
+        <label for="phone">Teléfono*</label>
+        <input type="tel" name="phone" id="phone" placeholder="Ej: +541112345678" pattern="^\d{1,3}\d{10}$" required>
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" required placeholder="Email">
+        <label for="message">Mensaje*</label>
+        <textarea name="message" id="message" placeholder="Mensaje" required rows="4"></textarea>
+        <input class="button" type="submit" value="Enviar">
+      </div>
+    </form>
+
+    <div id="successMessage" style="display: none; text-align: center; padding: 30px;">
+      <span style='font-size:50px;'>&#10004;</span>
+      <h2>¡Mensaje enviado con éxito!</h2>
+      <p>Gracias por contactarme. Puedes:</p>
+      <p>
+        <a href="../proyectos/index.html" style="color: #3e2318; text-decoration: underline; margin: 0 10px;">Ver mis proyectos</a> 
+        o 
+        <a href="../arte/index.html" style="color: #3e2318; text-decoration: underline; margin: 0 10px;">explorar mi arte</a>
+      </p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <script src="../js/codigo.js"></script>
+</body>
+</html>

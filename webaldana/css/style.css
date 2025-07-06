@@ -1,0 +1,361 @@
+/* Estilo de la base */
+body {
+  background-color: #faf3e0;
+  margin: 0;
+  font-family: Cochin, serif;
+  color: #3e2318;
+  line-height: 1.6;
+  padding-top: 70px; 
+}
+
+/* encabezado */
+.encabezado-cv {
+  background: #eecdae;
+  background: radial-gradient(circle, rgba(238, 205, 174, 1) 0%, rgba(234, 164, 153, 1) 100%, rgba(233, 154, 148, 1) 100%);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+.encabezado-arte, .encabezado-proyectos, .encabezado-contacto {
+  animation: liquid 15s infinite alternate;
+}
+
+@keyframes liquid {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* contenedor 1° aestetich */
+.contenido-principal {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 50px;
+  border: 2px solid #d7cbb5;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.seccion-datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.foto-perfil {
+  width: 180px;
+  height: 210px;
+  border-radius: 25px;
+  border: 3px solid #d7cbb5;
+  object-fit: cover;
+}
+
+/* datos personales */
+.datos-personales {
+  flex: 1;
+}
+
+/* titles */
+h2, h3 {
+  color: #3e2318;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+h3 {
+  border-bottom: 2px solid #d7cbb5;
+  padding-bottom: 5px;
+  margin: 30px 0 15px 0;
+}
+
+.seccion-trabajos {
+  margin-top: 60px;
+}
+
+.lista-trabajos {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.item-trabajo {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.item-trabajo:before {
+  content: "•";
+  color: #3e2318;
+  font-size: 24px;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+
+/* Estilo Manú */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center; 
+}
+
+.horizontal {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; 
+  width: 100%; 
+}
+
+.horizontal li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.horizontal li a {
+  text-decoration: none;
+  color: #2c0e06;
+  font-weight: 500;
+  padding: 8px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.horizontal li a:hover {
+  color: #EAA499;
+  box-shadow: 0 2px;
+}
+
+/* botones  hamburguesa */
+.abrir-menu, .cerrar-menu {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+
+/* Responsive celular */
+@media screen and (max-width: 550px) {
+  .abrir-menu, .cerrar-menu {
+    display: block;
+  }
+  
+  .horizontal {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #3e2318;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    margin: 0;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  .horizontal.visible {
+    right: 0;
+  }
+  
+  .horizontal li {
+    display: block;
+    margin: 15px 0;
+  }
+  
+  .horizontal li a {
+    color: #ececec;
+    font-size: 1.2rem;
+  }
+  
+  .cerrar-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ececec;
+    font-size: 2rem;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+.horizontal.visible {
+  z-index: 999; 
+}
+
+.horizontal.visible li a {
+  pointer-events: auto;
+}
+
+/* estilo contacto */
+form {
+  padding: 20px;
+  box-shadow: 0 0 20px #3e2318;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  color: #3e2318;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  padding: 17px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #EECDAE;
+  border: 2px solid #faf3e0;
+  color: #3e2318;
+  outline: none;
+}
+
+/*slider (proyectos) */
+
+.slider-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+}
+
+.slider img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Puntos de navegación (proyectos) */
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.slider-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3e2318;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slider-button:hover,
+.slider-button.active {
+  opacity: 1;
+}
+
+/* Encabezado 2 */
+.encabezado-proyectos {
+  background: #eecdae;
+  background: radial-gradient(circle, rgba(238, 205, 174, 1) 0%, rgba(234, 164, 153, 1) 100%, rgba(233, 154, 148, 1) 100%);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/*contenedor imagenes proyecto*/
+.contenido-proyectos {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.elem {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  outline: none;
+}
+
+/* Encabezado 3 */
+.encabezado-contacto {
+  background: #eecdae;
+  background: radial-gradient(circle, rgba(238, 205, 174, 1) 0%, rgba(234, 164, 153, 1) 100%, rgba(233, 154, 148, 1) 100%);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* Encabezado 4 */
+.encabezado-arte {
+  background: #eecdae;
+  background: radial-gradient(circle, rgba(238, 205, 174, 1) 0%, rgba(234, 164, 153, 1) 100%, rgba(233, 154, 148, 1) 100%);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .seccion-datos {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*botón de arte*/
+.slider-button {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.slider-button:hover {
+  transform: scale(2);
+}
+
+.slider-button.active {
+  transform: scale(1);
+  background-color: #EAA499;
+}
+
+/*animación js*/
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
